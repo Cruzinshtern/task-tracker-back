@@ -25,6 +25,7 @@ export class AuthService {
 
   private async generateToken(user: LoginUserDto) {
     const payload = {
+      id: user.id,
       email: user.email,
       firstName: user.firstName,
       lastName: user.lastName
